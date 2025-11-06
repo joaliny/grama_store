@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mundo da Grama - Manaus{% endblock %}</title>
+
+    <!-- Load Static Files -->
+    {% load static %}
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <!-- CSS Específico de cada página -->
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="logo-container">
+                <div class="logo-icon">🌿</div>
+                <div class="logo-text">
+                    <div class="logo-main">JP</div>
+                    <div class="logo-subtitle">BOTHANICA</div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="{% url 'home' %}#inicio">Home</a>
+                <a href="{% url 'home' %}#gramas">Gramas</a>
+                <a href="{% url 'home' %}#dicas">Dicas</a>
+                <a href="{% url 'home' %}#sobre">Sobre Nós</a>
+                <a href="{% url 'home' %}#contato">Contato</a>
+                <a href="{% url 'politica' %}">Política de Privacidade</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        {% block content %}
+        <!-- O conteúdo específico de cada página vai aqui -->
+        {% endblock %}
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <!-- Seção da Logo -->
+        <div class="footer-logo">
+            <a href="{% url 'home' %}" class="logo-footer">
+                <div class="logo-footer-icon">🌿</div>
+                <div class="logo-footer-text">
+                    <div class="logo-footer-main">JP</div>
+                    <div class="logo-footer-subtitle">BOTHANICA</div>
+                </div>
+            </a>
+            <div class="slogan">
+                Grama sob medida para <br> toda <span class="slogan-uppercase">MANAUS-AM</span>
+            </div>
+            <!-- Opcional: Ícones de redes sociais -->
+            <div class="footer-social">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Institucional</h3>
+            <ul>
+                <li><a href="{% url 'home' %}#inicio">Home</a></li>
+                <li><a href="{% url 'home' %}#gramas">Gramas</a></li>
+                <li><a href="{% url 'home' %}#dicas">Dicas</a></li>
+                <li><a href="{% url 'home' %}#sobre">Sobre Nós</a></li>
+                <li><a href="{% url 'home' %}#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Dicas</h3>
+            <ul>
+                <li><a href="#">Como Plantar Grama</a></li>
+                <li><a href="#">Adubação de Gramas</a></li>
+                <li><a href="#">Como Matar Erva Daninha</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contatos</h3>
+            <div class="contact-info">
+                <p>jpbothanica@outlook.com</p>
+                <p class="checked">pricha@gmail.com</p>
+                <p>(92) 9954-8954</p>
+                <p>Lago Azul, Manaus - AM</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-left">
+            <div class="copyright">JP Bothanica Copyright © 2025 - Todos os Direitos Reservados.</div>
+        </div>
+        <a href="{% url 'politica' %}" class="privacy-policy">Políticas de Privacidade</a>
+    </div>
+</footer>
+
+<a href="https://wa.me/5592995234735?text=Olá! Gostaria de um orçamento de grama" class="whatsapp-float"
+    target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.248-6.189-3.515-8.452" />
+    </svg>
+</a>
+
+    <!-- JavaScript Global -->
+    <script src="{% static 'js/base.js' %}"></script>
+
+    <!-- JavaScript Específico de cada página -->
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

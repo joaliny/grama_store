@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Botânica Grama - Página Inicial{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section com Carrossel -->
+<section class="hero" id="inicio">
+    <div class="carrossel">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <div class="slide-content">
+                <h1 class="titulo-separado">GRAMA NATURAL</h1>
+                <div class="slogan-slide">"Um toque de verde faz toda a diferença — comece hoje com nossa grama impecável."
+                </div>
+                <a href="https://wa.me/5592999999999?text=Olá! Gostaria de solicitar um orçamento de grama" class="btn-contato"
+                    target="_blank">
+                    📋 Solicite um Orçamento
+                </a>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1 class="titulo-separado">GRAMAS DE ALTA QUALIDADE</h1>
+                <div class="slogan-slide">"Esmeralda, São Carlos e Bermuda - As melhores para seu jardim"</div>
+                <a href="https://wa.me/5592999999999?text=Olá! Gostaria de solicitar um orçamento de grama" class="btn-contato"
+                    target="_blank">
+                    📋 Solicite um Orçamento
+                </a>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1 class="titulo-separado">ENTREGA RÁPIDA</h1>
+                <div class="slogan-slide">"Entregamos em toda Manaus com agilidade e cuidado"</div>
+                <a href="https://wa.me/5592999999999?text=Olá! Gostaria de solicitar um orçamento de grama" class="btn-contato"
+                    target="_blank">
+                    📋 Solicite um Orçamento
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="carrossel-indicadores">
+        <span class="indicador active"></span>
+        <span class="indicador"></span>
+        <span class="indicador"></span>
+    </div>
+</section>
+
+
+<!-- Por que Nós Section -->
+<section class="porque-nos">
+    <h2 class="section-title">POR QUE NÓS?</h2>
+
+    <h3 class="diferenciais-titulo">NOSSOS DIFERENCIAIS</h3>
+
+    <p class="inspiracao-texto">
+        Imagine, Sonhe, Realize: seu jardim dos sonhos está mais perto do que você imagina
+    </p>
+
+    <div class="diferenciais-grid">
+        <div class="diferencial-card">
+            <div class="card-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <h3>PRODUTO DE QUALIDADE</h3>
+            <p>Utilizamos os melhores produtos, garantindo a qualidade e a beleza.</p>
+        </div>
+        <div class="diferencial-card">
+            <div class="card-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h3>COMPROMISSO COM PRAZOS</h3>
+            <p>Entregamos seu produto dentro do prazo estabelecido.</p>
+        </div>
+        <div class="diferencial-card">
+            <div class="card-icon">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h3>ATENDIMENTO PERSONALIZADO</h3>
+            <p>Estamos com você do início ao fim do seu projeto.</p>
+        </div>
+    </div>
+
+
+    <!-- Onda decorativa DENTRO da seção -->
+    <div class="onda-decorativa">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                opacity=".25" fill="#3a9e5a"></path>
+            <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                opacity=".5" fill="#3a9e5a"></path>
+            <path
+                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                fill="#3a9e5a"></path>
+        </svg>
+    </div>
+</section>
+
+<section class="tipos-grama" id="gramas">
+    <h2 class="section-title">TIPOS DE GRAMAS</h2>
+    <p class="destaque-verde">Estamos Juntos com você do inicio ao fim do serviço</p>
+    <p class="preco-destaque">Grama Natural com o melhor preço m²</p>
+
+<div class="gramas-grid">
+    <div class="grama-card">
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="Grama Bermuda" class="grama-imagem">
+        <div class="grama-conteudo">
+            <h3>Grama Bermuda</h3>
+            <p>Ideal para áreas com muito sol, muito resistente e de fácil manutenção. Suporta pisoteio intenso.</p>
+            <div class="grama-preco">R$ 15,90/m²</div>
+        </div>
+    </div>
+
+    <div class="grama-card">
+        <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="Grama São Carlos" class="grama-imagem">
+        <div class="grama-conteudo">
+            <h3>Grama São Carlos</h3>
+            <p>Perfeita para sombra, com folhas largas e crescimento rápido. Ideal para jardins residenciais.</p>
+            <div class="grama-preco">R$ 18,50/m²</div>
+        </div>
+    </div>
+
+    <div class="grama-card">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="Grama Esmeralda" class="grama-imagem">
+        <div class="grama-conteudo">
+            <h3>Grama Esmeralda</h3>
+            <p>A mais popular, com visual exuberante e alta durabilidade. Textura fina e cor vibrante.</p>
+            <div class="grama-preco">R$ 16,90/m²</div>
+        </div>
+    </div>
+
+    <div class="grama-card">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="Grama Batatais" class="grama-imagem">
+        <div class="grama-conteudo">
+            <h3>Grama Batatais</h3>
+            <p>Econômica e resistente, ideal para áreas extensas. Baixa necessidade de manutenção.</p>
+            <div class="grama-preco">R$ 12,90/m²</div>
+        </div>
+    </div>
+</div>
+
+    <a href="https://wa.me/5592999999999?text=Olá! Gostaria de um orçamento de grama" class="cta-button"
+        target="_blank">
+        Pedir Orçamento
+    </a>
+</section>
+
+<!-- Seção Nossos Trabalhos - Carrossel Múltiplo -->
+<section class="nossos-trabalhos" id="trabalhos">
+    <div class="trabalhos-header">
+        <h2 class="trabalhos-titulo">NOSSOS TRABALHOS</h2>
+        <p class="trabalhos-subtitulo">Confira alguns dos trabalhos que já realizamos:</p>
+    </div>
+
+    <div class="carrossel-trabalhos">
+        <div class="carrossel-container" id="carrosselContainer">
+            <!-- Slides -->
+            <div class="trabalho-slide">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Jardim Residencial" class="trabalho-imagem">
+                <div class="trabalho-info">
+                    <h3 class="trabalho-titulo">Jardim Residencial</h3>
+                    <p class="trabalho-descricao">Gramagem completa com espécies selecionadas</p>
+                </div>
+            </div>
+
+            <div class="trabalho-slide">
+                <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Área Comercial" class="trabalho-imagem">
+                <div class="trabalho-info">
+                    <h3 class="trabalho-titulo">Área Comercial</h3>
+                    <p class="trabalho-descricao">Paisagismo corporativo</p>
+                </div>
+            </div>
+
+            <div class="trabalho-slide">
+                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Quintal Personalizado" class="trabalho-imagem">
+                <div class="trabalho-info">
+                    <h3 class="trabalho-titulo">Quintal Personalizado</h3>
+                    <p class="trabalho-descricao">Design exclusivo</p>
+                </div>
+            </div>
+
+            <!-- Mais slides -->
+            <div class="trabalho-slide">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Jardim Vertical" class="trabalho-imagem">
+                <div class="trabalho-info">
+                    <h3 class="trabalho-titulo">Jardim Vertical</h3>
+                    <p class="trabalho-descricao">Paisagismo moderno</p>
+                </div>
+            </div>
+
+            <div class="trabalho-slide">
+                <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Área de Lazer" class="trabalho-imagem">
+                <div class="trabalho-info">
+                    <h3 class="trabalho-titulo">Área de Lazer</h3>
+                    <p class="trabalho-descricao">Gramado recreativo</p>
+                </div>
+            </div>
+
+            <div class="trabalho-slide">
+                <img src="https://images.unsplash.com/photo-1600586115151-6601adf9821d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                    alt="Fachada Comercial" class="trabalho-imagem">
+                <div class="trabalho-info">
+                    <h3 class="trabalho-titulo">Fachada Comercial</h3>
+                    <p class="trabalho-descricao">Paisagismo empresarial</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <button class="carrossel-btn carrossel-prev" onclick="mudarSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carrossel-btn carrossel-next" onclick="mudarSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="carrossel-indicadores" id="indicadores">
+        <span class="indicador active" onclick="irParaSlide(0)"></span>
+        <span class="indicador" onclick="irParaSlide(1)"></span>
+        <span class="indicador" onclick="irParaSlide(2)"></span>
+    </div>
+</section>
+
+    <!-- Seção Sobre Nós -->
+<section class="sobre-nos">
+    <h2 class="sobre-titulo">Sobre Nós</h2>
+
+    <div class="sobre-conteudo">
+        <div class="sobre-texto-container">
+            <p class="sobre-texto">
+                <span class="destaque">O Mundo da Grama</span> é especializada na venda de gramas de alta qualidade,
+                como <span class="destaque">Esmeralda</span> e <span class="destaque">São Carlos</span>, oferecendo
+                também serviços de instalação e consultoria paisagística. Com compromisso com a sustentabilidade, a
+                empresa visa transformar espaços em ambientes verdes e agradáveis. Sua equipe experiente garante
+                atendimento personalizado e pontualidade.
+            </p>
+
+            <h3 class="missao-titulo">Nossa Missão:</h3>
+
+            <p class="missao-texto">
+                A missão da <span class="destaque">Mundo da Grama</span> é promover o bem-estar e incentivar a criação
+                de espaços verdes. Entre em contato e construa um futuro mais sustentável!
+            </p>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            alt="Mundo da Grama - Nossos Trabalhos" class="sobre-imagem">
+    </div>
+</section>
+
+<script>
+    let slideAtual = 0;
+    const slides = document.querySelectorAll('.trabalho-slide');
+    const indicadores = document.querySelectorAll('.indicador');
+    const carrosselContainer = document.getElementById('carrosselContainer');
+    const slidesPorVez = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+
+    function mostrarSlide(n) {
+        slideAtual = n;
+        const totalSlides = slides.length;
+
+        if (slideAtual >= totalSlides - slidesPorVez + 1) slideAtual = totalSlides - slidesPorVez;
+        if (slideAtual < 0) slideAtual = 0;
+
+        // Calcula o deslocamento baseado na largura dos slides + gap
+        const slideWidth = slides[0].offsetWidth + 20; // 20px é o gap
+        const translateX = -slideAtual * slideWidth;
+
+        carrosselContainer.style.transform = `translateX(${translateX}px)`;
+
+        // Atualiza indicadores
+        indicadores.forEach((ind, index) => {
+            ind.classList.toggle('active', index === slideAtual);
+        });
+    }
+
+    function mudarSlide(direcao) {
+        mostrarSlide(slideAtual + direcao);
+    }
+
+    function irParaSlide(n) {
+        mostrarSlide(n);
+    }
+
+    // Auto-play
+    setInterval(() => {
+        if (slideAtual < slides.length - slidesPorVez) {
+            mudarSlide(1);
+        } else {
+            mostrarSlide(0); // Volta para o início
+        }
+    }, 4000);
+
+    // Recalcula slides por vez no resize
+    window.addEventListener('resize', () => {
+        const newSlidesPorVez = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+        if (newSlidesPorVez !== slidesPorVez) {
+            mostrarSlide(0);
+        }
+    });
+
+    // Inicializa
+    mostrarSlide(0);
+</script>
+
+{% endblock %}
+
+
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

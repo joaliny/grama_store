@@ -1,0 +1,839 @@
+/* static/css/base.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fafdf8;
+    color: #1a3312;
+    line-height: 1.7;
+    font-weight: 300;
+    padding-top: 80px;
+}
+
+/* Header Botânica Elegante */
+.header {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e8f5e8;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 2px 30px rgba(44, 123, 66, 0.1);
+    padding: 1rem 0;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Logo Style */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    color: #2c7b42;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-main {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #2c7b42;
+    letter-spacing: 2px;
+}
+
+.logo-subtitle {
+    font-size: 1rem;
+    color: #7ba98b;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* Navigation Links - Estilo Botânica */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #2d5540;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #3a9e5a;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #3a9e5a, #8bc34a);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Menu Mobile (para responsivo) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2c7b42;
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    min-height: calc(100vh - 160px);
+}
+
+/* Footer Elegante
+.footer {
+    background: linear-gradient(135deg, #1a3312, #2d5540);
+    color: #e8f5e8;
+    padding: 3rem 0 2rem;
+    margin-top: 6rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #a8d5b5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+} */
+
+/* WhatsApp Float Moderno */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+}
+
+/* Utilitários */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #2c7b42;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #3a9e5a, #8bc34a);
+    border-radius: 2px;
+}
+
+/* Cards Elegantes */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(44, 123, 66, 0.08);
+    border: 1px solid #f0f7f0;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(44, 123, 66, 0.12);
+}
+
+/* Botões Sofisticados */
+.btn-primary {
+    background: linear-gradient(135deg, #3a9e5a, #2c7b42);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 123, 66, 0.3);
+    color: white;
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Espaçamentos */
+.section-spacing {
+    padding: 5rem 0;
+}
+
+.py-4 {
+    padding: 4rem 0;
+}
+
+.py-6 {
+    padding: 6rem 0;
+}
+
+/* Text Colors */
+.text-primary {
+    color: #2c7b42;
+}
+
+.text-secondary {
+    color: #3a9e5a;
+}
+
+.text-light {
+    color: #7ba98b;
+}
+
+/* Background Colors */
+.bg-light-green {
+    background: #f8fdf8;
+}
+
+.bg-white {
+    background: white;
+}
+
+/* Responsivo */
+@media (max-width: 968px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .logo-main {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        padding: 1rem 2rem;
+        width: 100%;
+        border-bottom: 1px solid #f0f7f0;
+        font-size: 1rem;
+    }
+
+    .logo-main {
+        font-size: 1.3rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.6rem;
+    }
+}
+
+.main-content {
+    min-height: calc(100vh - 160px);
+    margin-bottom: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== FOOTER MAIS COMPACTO ===== */
+footer {
+    background: #e1e0e089;
+    color: rgb(90, 88, 88);
+    padding: 15px 10px 5px;
+    /* Reduzido: era 20px 10px 5px */
+    border-top: 1px solid #579a6c;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    /* Reduzido: era 60px */
+}
+
+/* Logo Section Compacta */
+.footer-logo {
+    flex: 0 0 180px;
+    /* Reduzido: era 200px */
+    text-align: left;
+    margin-right: 15px;
+    /* Reduzido: era 20px */
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Reduzido: era 10px */
+    margin-bottom: 12px;
+    /* Reduzido: era 18px */
+    text-decoration: none;
+}
+
+.logo-footer-icon {
+    font-size: 2.2rem;
+    /* Reduzido: era 3rem */
+    color: #3a9e5a;
+}
+
+.logo-footer-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-footer-main {
+    font-size: 1.6rem;
+    /* Reduzido: era 1.9rem */
+    font-weight: 300;
+    color: rgb(15, 158, 29);
+    letter-spacing: 1.2px;
+    /* Reduzido: era 1.5px */
+}
+
+.logo-footer-subtitle {
+    font-size: 0.8rem;
+    /* Reduzido: era 1rem */
+    color: #24783b;
+    letter-spacing: 1.5px;
+    /* Reduzido: era 2px */
+    font-weight: 600;
+    margin-top: 1px;
+    /* Reduzido: era 2px */
+}
+
+/* REMOVA ou COMENTE a frase do .footer-description se estiver lá */
+.footer-description {
+    font-size: 13px;
+    color: #717171;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* ADICIONE esta nova classe para a frase específica */
+.footer-slogan-text {
+    font-size: 13px;
+    color: #717171;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase; /* Para deixar em maiúsculas como na imagem */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    text-align: center; /* Alinhamento centralizado */
+}
+
+.slogan {
+    font-size: 13px;
+    color: #717171;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.slogan-uppercase {
+    text-transform: uppercase;
+}
+/* Footer Sections Compactas */
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+    /* Reduzido: era 180px */
+    margin-bottom: 10px;
+    /* Reduzido: era 15px */
+    padding: 0 10px;
+    /* Reduzido: era 15px */
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+/* Para Font Awesome */
+.whatsapp-float i {
+    font-size: 1.8rem;
+}
+
+/* Para SVG */
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-section h3 {
+    font-size: 15px;
+    /* Reduzido: era 14px */
+    margin-bottom: 15px;
+    /* Reduzido: era 20px */
+    font-weight: 600;
+    color: #717171;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    /* Reduzido: era 1px */
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    /* Reduzido: era -8px */
+    left: 0;
+    width: 25px;
+    /* Reduzido: era 30px */
+    height: 2px;
+    background: #3a9e5a;
+    border-radius: 1px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 6px;
+    /* Reduzido: era 10px */
+}
+
+.footer-section ul li a {
+    color: #717171;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    /* Reduzido: era 15px */
+    font-weight: 350;
+    display: block;
+    padding: 1px 0;
+    /* Reduzido: era 2px 0 */
+    line-height: 1.1;
+    /* Reduzido: era 1.2 */
+}
+
+.footer-section ul li a:hover {
+    color: #38b460;
+    transform: translateX(2px);
+}
+
+/* Contact Info Compacto */
+.contact-info {
+    margin-top: 12px;
+    /* Reduzido: era 15px */
+}
+
+.contact-info p {
+    margin-bottom: 6px;
+    /* Reduzido: era 10px */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    /* Reduzido: era 13px */
+    color: #717171;
+    font-weight: 300;
+    line-height: 1.2;
+    /* Reduzido: era 1.4 */
+}
+
+.contact-info p::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    /* Reduzido: era 6px */
+    height: 5px;
+    background: #3a9e5a;
+    border-radius: 50%;
+    margin-right: 8px;
+    /* Reduzido: era 12px */
+    flex-shrink: 0;
+}
+
+.contact-info p.checked::before {
+    background: #3a9e5a;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background: #2c7b42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #3faf62;
+    transform: translateY(-2px);
+}
+
+/* Para Font Awesome */
+.social-icon i {
+    font-size: 16px;
+}
+
+/* Para SVG */
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Footer Bottom Compacto */
+.footer-bottom {
+    max-width: 1000px;
+    /* Reduzido: era 1200px */
+    margin: 15px auto 0;
+    /* Reduzido: era 25px auto 0 */
+    padding-top: 10px;
+    /* Reduzido: era 15px */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    /* Reduzido: era 20px */
+}
+
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Reduzido: era 25px */
+}
+
+.slogan {
+    font-size: 13px;
+    /* Reduzido: era 14px */
+    font-weight: 600;
+    color: #717171;
+}
+
+.copyright {
+    font-size: 15px;
+    /* Reduzido: era 12px */
+    color: #717171;
+    font-weight: 400;
+}
+
+.privacy-policy {
+    font-size: 15px;
+    /* Reduzido: era 14px */
+    color: #717171;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.privacy-policy:hover {
+    color: #41b867;
+    text-decoration: underline;
+}
+
+/* ESPAÇAMENTO ESPECÍFICO ENTRE COLUNAS (Reduzido) */
+.footer-section:nth-child(2) {
+    margin-left: 5px;
+    /* Reduzido: era 10px */
+}
+
+.footer-section:nth-child(3) {
+    margin-left: 3px;
+    /* Reduzido: era 5px */
+}
+
+.footer-section:nth-child(4) {
+    margin-left: 5px;
+    /* Reduzido: era 10px */
+}
+
+/* Responsive Compacto */
+@media (max-width: 968px) {
+    .footer-content {
+        gap: 30px;
+        /* Reduzido: era 40px */
+    }
+
+    .footer-logo {
+        flex: 0 0 160px;
+        /* Reduzido: era 180px */
+        margin-right: 0;
+    }
+
+    .footer-section {
+        padding: 0 8px;
+        /* Reduzido: era 10px */
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 15px 8px;
+        /* Reduzido: era 25px 15px 12px */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+        /* Reduzido: era 35px */
+        text-align: center;
+    }
+
+    .footer-logo {
+        flex: 1;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .logo-footer {
+        justify-content: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        padding: 0;
+        margin-left: 0 !important;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        /* Reduzido: era 15px */
+        margin-top: 15px;
+        /* Reduzido: era 20px */
+        padding-top: 10px;
+        /* Reduzido: era 15px */
+    }
+
+    .footer-bottom-left {
+        flex-direction: column;
+        gap: 8px;
+        /* Reduzido: era 12px */
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 12px 5px;
+        /* Reduzido: era 20px 12px 10px */
+    }
+
+    .footer-content {
+        gap: 20px;
+        /* Reduzido: era 30px */
+    }
+
+    .logo-footer-main {
+        font-size: 1.2rem;
+        /* Reduzido: era 1.3rem */
+    }
+
+    .logo-footer-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 12px;
+        /* Reduzido: era 15px */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 4px;
+        /* Reduzido: era 6px */
+    }
+}
