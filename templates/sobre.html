@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-sobre text-center">
+    <div class="container">
+        <h1>Sobre Nós</h1>
+        <p>Conheça a essência da JP Botânica — cultivando beleza, sustentabilidade e confiança.</p>
+    </div>
+</section>
+
+<div class="curva-invertida"></div>
+
+
+<section class="sobre-content py-5">
+    <div class="container">
+        <div class="sobre-intro">
+            <h2>Nossa História</h2>
+            <p>
+                A <strong>JP Botânica</strong> nasceu do amor pela natureza e pela arte de transformar espaços.
+                Desde o início, buscamos unir conhecimento técnico e sensibilidade estética para criar
+                jardins que inspiram e promovem bem-estar.
+                Com uma equipe apaixonada, oferecemos soluções completas em cultivo, manutenção e paisagismo
+                sustentável.
+            </p>
+        </div>
+
+        <div class="sobre-missao-visao">
+            <div class="card-sobre">
+                <div class="icon-sobre">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Missão</h3>
+                <p>
+                    Promover o equilíbrio entre natureza e urbanização, oferecendo produtos e serviços
+                    de qualidade que incentivam o cuidado com o meio ambiente.
+                </p>
+            </div>
+
+            <div class="card-sobre">
+                <div class="icon-sobre">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Visão</h3>
+                <p>
+                    Ser referência nacional em soluções botânicas, destacando-se pelo compromisso ambiental,
+                    inovação e satisfação dos clientes.
+                </p>
+            </div>
+
+            <div class="card-sobre">
+                <div class="icon-sobre">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Valores</h3>
+                <p>
+                    Ética, respeito à natureza, inovação contínua e paixão pelo verde são os pilares que guiam nosso
+                    trabalho.
+                </p>
+            </div>
+        </div>
+
+        <div class="sobre-cta">
+            <h3>Quer transformar seu espaço com a gente?</h3>
+            <a href="#" class="btn-sobre">Fale Conosco</a>
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    /* ======= CORES ======= */
+    :root {
+        --verde-escuro: #1f4632;
+        --verde-claro: #7ecb8a;
+        --areia: #f8f7f4;
+        --texto: #2d2d2d;
+    }
+
+    /* ======= HERO ======= */
+    .hero-sobre {
+        background: linear-gradient(135deg, var(--verde-escuro), var(--verde-claro));
+        color: #fff;
+        padding: 110px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-sobre::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: var(--areia);
+        border-radius: 50% 50% 0 0;
+        clip-path: ellipse(90% 100% at 50% 0%);
+    }
+
+    
+
+    .hero-sobre h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    .hero-sobre p {
+        font-size: 1.2rem;
+        opacity: 0.95;
+    }
+
+    /* ======= CONTEÚDO ======= */
+    .sobre-content {
+        background-color: var(--areia);
+        color: var(--texto);
+        padding: 80px 20px;
+    }
+
+    .sobre-intro {
+        max-width: 850px;
+        margin: 0 auto 60px;
+        text-align: center;
+        animation: fadeInUp 1s ease forwards;
+    }
+
+    .sobre-intro h2 {
+        font-size: 2.2rem;
+        color: var(--verde-escuro);
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .sobre-intro p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #4b4b4b;
+    }
+
+    /* ======= CARDS (Missão, Visão, Valores) ======= */
+    .sobre-missao-visao {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        margin-bottom: 70px;
+    }
+
+    .card-sobre {
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px 25px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-sobre::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: var(--verde-claro);
+        border-radius: 20px 20px 0 0;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .card-sobre:hover::before {
+        opacity: 1;
+    }
+
+    .card-sobre:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+    }
+
+    .icon-sobre {
+        background: var(--verde-claro);
+        color: var(--verde-escuro);
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 36px;
+        margin: 0 auto 20px;
+        transition: background 0.3s ease;
+    }
+
+    .card-sobre:hover .icon-sobre {
+        background: var(--verde-escuro);
+        color: #fff;
+    }
+
+    .card-sobre h3 {
+        color: var(--verde-escuro);
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .card-sobre p {
+        color: #5a5a5a;
+        line-height: 1.7;
+        font-size: 0.98rem;
+    }
+
+    /* ======= CTA ======= */
+    .sobre-cta {
+        text-align: center;
+        margin-top: 40px;
+        animation: fadeInUp 1s ease forwards;
+    }
+
+    .sobre-cta h3 {
+        color: var(--verde-escuro);
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .btn-sobre {
+        display: inline-block;
+        background: var(--verde-escuro);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-sobre:hover {
+        background: var(--verde-claro);
+        color: var(--verde-escuro);
+    }
+
+    /* ======= ANIMAÇÃO ======= */
+    @keyframes fadeInUp {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+{% endblock %}
