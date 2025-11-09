@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1>Dicas & Cultivo</h1>
+        <p>Especialistas da JP Botânica para um jardim perfeito</p>
+    </div>
+</section>
+
+<!-- Dicas Section -->
+<section class="dicas-section container">
+    <div class="intro text-center">
+        <h2>Conhecimento que Inspira</h2>
+        <p>Descubra segredos e técnicas que elevam sua jardinagem a outro nível</p>
+    </div>
+
+    <div class="dica-grid">
+        <!-- Dica 1 -->
+        <article class="dica-card">
+            <img src="{% static 'images/grama sendo irrigada.jpg' %}" alt="Regagem Ideal">
+            <div class="dica-info">
+                <span class="categoria">Gramas</span>
+                <h3>Regagem Ideal para Grama Esmeralda</h3>
+                <p>Aprenda a frequência e quantidade ideal de água para manter sua grama sempre verde e saudável.</p>
+                <a href="https://www.solgramas.com.br/irrigacao-da-grama" target="_blank" class="ler-mais">Ler mais</a>
+            </div>
+        </article>
+
+        <!-- Dica 2 -->
+        <article class="dica-card">
+            <img src="{% static 'images/6.jpg' %}" alt="Adubação">
+            <div class="dica-info">
+                <span class="categoria">Manutenção</span>
+                <h3>Melhor Época para Adubação</h3>
+                <p>Descubra os períodos ideais e nutrientes necessários para uma adubação eficiente.</p>
+                <a href="https://forthjardim.com.br/blog/duvidas-sobre-adubacao/adubacao-no-outono-e-inverno" target="_blank" class="ler-mais">Ler mais</a>
+            </div>
+        </article>
+
+        <!-- Dica 3 -->
+        <article class="dica-card">
+            <img src="{% static 'images/7.jpg' %}" alt="Pragas">
+            <div class="dica-info">
+                <span class="categoria">Jardinagem</span>
+                <h3>Controle Natural de Pragas</h3>
+                <p>Métodos ecológicos para controlar pragas sem prejudicar o meio ambiente.</p>
+                <a href="https://learn.tearfund.org/pt-pt/resources/footsteps/footsteps-111-120/footsteps-115/natural-pest-management" target="_blank" class="ler-mais">Ler mais</a>
+            </div>
+        </article>
+
+        <!-- Dica 4 -->
+        <article class="dica-card">
+            <img src="{% static 'images/8.jpg' %}" alt="Podagem">
+            <div class="dica-info">
+                <span class="categoria">Manutenção</span>
+                <h3>Técnicas de Podagem Correta</h3>
+                <p>Como e quando podar suas plantas para um crescimento saudável e harmonioso.</p>
+                <a href="#" class="ler-mais">Ler mais</a>
+            </div>
+        </article>
+
+        <!-- Dica 5 -->
+        <article class="dica-card">
+            <img src="{% static 'images/9.jpg' %}" alt="Solo">
+            <div class="dica-info">
+                <span class="categoria">Preparação</span>
+                <h3>Preparo Ideal do Solo</h3>
+                <p>Aprenda a preparar o solo para receber sua grama e garantir um enraizamento perfeito.</p>
+                <a href="#" class="ler-mais">Ler mais</a>
+            </div>
+        </article>
+
+        <!-- Dica 6 -->
+        <article class="dica-card">
+            <img src="{% static 'images/10.jpg' %}" alt="Estações">
+            <div class="dica-info">
+                <span class="categoria">Cultivo</span>
+                <h3>Cuidados por Estação</h3>
+                <p>Guia completo dos cuidados necessários em cada estação do ano.</p>
+                <a href="#" class="ler-mais">Ler mais</a>
+            </div>
+        </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta text-center">
+        <h3>Quer ajuda profissional?</h3>
+        <p>Transforme seu espaço com a JP Botânica.</p>
+        <a href="#" class="cta-btn">Fale Conosco</a>
+    </div>
+</section>
+
+<style>
+    :root {
+        --verde: #2e7d32;
+        --verde-claro: #c8e6c9;
+        --cinza: #5f6b61;
+        --branco: #fff;
+        --sombra: rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    /* ===== HERO ===== */
+    .hero-section {
+  background: linear-gradient(135deg, #3a5a40, #a3b18a);
+  color: #fff;
+  padding: 90px 20px;
+}
+
+
+    .hero-section h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    /* ===== INTRO ===== */
+    .intro {
+        margin: 70px auto 50px;
+        max-width: 700px;
+    }
+
+    .intro h2 {
+        font-weight: 600;
+        color: var(--verde);
+        font-size: 1.9rem;
+    }
+
+    .intro p {
+        color: var(--cinza);
+        margin-top: 10px;
+    }
+
+    /* ===== GRID DE DICAS ===== */
+    .dica-grid {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .dica-card {
+        background: var(--branco);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px var(--sombra);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dica-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .dica-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .dica-info {
+        padding: 25px;
+    }
+
+    .categoria {
+        background: var(--verde-claro);
+        color: var(--verde);
+        font-weight: 600;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+    }
+
+    .dica-info h3 {
+        margin: 15px 0 10px;
+        color: #1c352d;
+        font-size: 1.2rem;
+    }
+
+    .dica-info p {
+        color: var(--cinza);
+        line-height: 1.6;
+    }
+
+    .ler-mais {
+        display: inline-block;
+        margin-top: 15px;
+        color: var(--verde);
+        text-decoration: none;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .ler-mais::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 0%;
+        background: var(--verde);
+        transition: width 0.3s;
+    }
+
+    .ler-mais:hover::after {
+        width: 100%;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+        margin-top: 80px;
+        background: #f5f7f5;
+        padding: 60px 20px;
+        border-radius: 20px;
+    }
+
+    .cta h3 {
+        color: var(--verde);
+        font-weight: 600;
+    }
+
+    .cta p {
+        color: var(--cinza);
+        margin: 10px 0 25px;
+    }
+
+    .cta-btn {
+        background: var(--verde);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+        background: #1b5e20;
+    }
+</style>
+
+{% endblock %}
